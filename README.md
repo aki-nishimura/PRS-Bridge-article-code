@@ -21,6 +21,7 @@ This is the viable code for the PRS-Bridge paper.
  - plot_RE.R: visualize relative efficiency of methods in Figure S10 and S11.
  - plot_tuning.R: visualize results of tuning in Figure S3 and S4.
  - plot_PRScs_a.R: visualize results of tuning in Figure S5.
+ - plot_regularized.R: visualize results of tuning in Figure S7.
  
  ### run-methods
  To reproduce the real data analysis results for disease traits, please first download the publicly available GWAS summary statistics and run process_disease_dat.R. For continuous traits, obtain the genotype and phenotype data from the UK Biobank and run process_continuous_dat.R. Next, run sumdat_QC.R to perform quality control and generate the required input summary statistics for each method. Finally, follow the guidance in each method’s tutorial to obtain the appropriate LD reference panel and run the corresponding R scripts for each method.
@@ -29,6 +30,8 @@ This is the viable code for the PRS-Bridge paper.
  - sumdat_QC.R: Quality control for summary statistics.
  - PRScs.R: generate script files for running PRS-CS. 
  - PRScs_proj.R: generate script files for running PRS-CS-Projection. 
+ - PRScs_threshold.R: generate script files for running PRS-CS with different threshold used in ad-hoc solution. 
+ - PRScs_regularized.R: generate script files for running PRS-CS with regularized LD.
  - PRSBridge.R: generate script files for running PRS-Bridge.
  - PRSBridge.R: R script files for running LDpred2.
  - LASSOSUM.R: R script files for running LASSOSUM.
@@ -44,8 +47,10 @@ This is the viable code for the PRS-Bridge paper.
  This folder contains code revised from the original PRS-CS method
  (https://github.com/getian107/PRScs). The LD reference panel can be downloaded by following the instructions on the original PRS-CS repository. Two main files in this folder are used to reproduce the results shown in Figure 1. An example of how to run the code and generate the figure is provided in plot-result/plot_fig1.R.
  - PRScs_noconverge.py: Remove the ad hoc method implemented in the original PRScs.py 
- - PRScs_proj.R: Extends the original PRS-CS framework by incorporating our proposed projected summary statistics approach.
-
+ - PRScs_proj.py: Extends the original PRS-CS framework by incorporating our proposed projected summary statistics approach.
+ - PRScs_threshold.py: Extends the original PRS-CS framework by using different values of threshold chosen in ad hoc solution.
+ - PRScs_Regularized.py: Extends the original PRS-CS framework by incorporating regularized LD approach.
+ 
  ### data
  - PRScs_sumdat.txt: data for reproducing Figure 1.
  - chr22.bim: data for reproducing Figure 1.

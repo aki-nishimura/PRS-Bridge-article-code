@@ -1,6 +1,6 @@
 ########### This script is used to generate and submit script files for PRS-CS-Projection
 a_list = c(1) # controlling prior sparsity assumption. Default: 1, can be 0.5, 1.0, 1.5
-phi_list = c(0, 1, 0.01, 0.0001, 0.000001) # controlling prior sparsity assumption. Recommended: 0.2, 0.4, 0.6, 0.8
+phi_list = c(0, 1, 0.01, 0.0001, 0.000001) # controlling prior sparsity assumption. Recommended: 0, 1, 0.01, 0.0001, 0.000001
 percent_list = c(0.2, 0.4, 0.6, 0.8) # controlling percent of eigenvalue removed. Recommended: 0.2, 0.4, 0.6, 0.8
 
 name_list = c('_auto', '_1', '_e2', '_e4', '_e6') # corresponding to the name of phi_list
@@ -35,17 +35,6 @@ for (chr in c(1:22)) {
         }
         cat("module load anaconda \n")
         cat(sent_run, "\n")
-        bfile = paste0('chr', chr)
-        name1 = name_list_prs[phi_i]
-        result_dir = paste0(trait, '/', ref, '/PRScs_proj/result/percent', percent_i, '/chr', chr,
-                            '_pst_eff_a', a, '_b0.5_phi', name1, '_chr', chr)
-        prs_output = paste0(result_dir, '_prs.txt')
-        prscode = paste(paste0('plink'),
-                        paste0('--score ', result_dir, '.txt'),
-                        paste0(' 2 5 6 sum --bfile ',bfile),
-                        " --threads 1",
-                        paste0(' --out ', prs_output))
-        cat(prscode, "\n")
         sink()
       }
     }
