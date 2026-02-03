@@ -3,7 +3,7 @@ library(dplyr)
 library(ggplot2)
 library(ggpubr)
 
-###### To generate this plot, Please run PRScs_threshold.R, PRScs_proj.R, and PRSs_regularized.R in run-methods section using ukbb and 1kg as reference data
+###### To generate this plot, Please run PRScs_threshold.R, PRScs_proj.R, and PRSs_regularized.R in run-methods section using ukbb and 1kg as reference data and do evaluation for each method in evaluation section
 
 ####### Input trait is the same as trait used in run-methods and evaluation
 my_plot = function(trait){

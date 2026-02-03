@@ -10,10 +10,15 @@ This is the viable code for the PRS-Bridge paper.
 ## Organization:
 
 ### evaluation
- - RE_Lassosum.R: get the relative efficiency of each methods in Section S11.
- - get_sd.R: get $R^2$ and standard error of methods in Section 4.2.
- - get_sd_disease.R: get transformed AUC and standard error of methods in Section 4.3.
- 
+ - RE_Lassosum.R: get the relative efficiency of each methods.
+ - get_sd_PRSBridge.R: get $R^2$ or transformed AUC and corresponding standard error of PRSBridge.
+ - get_sd_PRScs.R: get $R^2$ or transformed AUC and corresponding standard error of PRS-CS.
+ - get_sd_ldpred2.R: get $R^2$ or transformed AUC and corresponding standard error of LDpred2.
+ - get_sd_LASSOSUM.R: get $R^2$ or transformed AUC and corresponding standard error of LASSOSUM.
+ - get_sd_PRScs_threshold.R: get $R^2$ or transformed AUC and corresponding standard error of PRS-CS-threshold.
+ - get_sd_PRScs_proj.R: get $R^2$ or transformed AUC and corresponding standard error of PRS-CS-projection.
+ - get_sd_PRScs_regularized.R: get $R^2$ or transformed AUC and corresponding standard error of PRS-CS-Regularized.
+
  ### plot-results
  - plot.R: visualize results of each method in Figure 4 and 5.
  - plot_fig1.R: Reproduce and visualize posterior coefficients in Figure 1.
