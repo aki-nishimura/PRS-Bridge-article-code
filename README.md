@@ -8,7 +8,7 @@ This repository contains instruction and scripts to reproduce all simulation and
 
 ## Prerequisites
 -   **External software:**  PRS-Bridge [https://github.com/YuzhengDun1999/PRSBridge](https://github.com/YuzhengDun1999/PRSBridge); PRS-CS [https://github.com/getian107/PRScs](https://github.com/getian107/PRScs); Plink 1.9 [https://www.cog-genomics.org/plink/](https://www.cog-genomics.org/plink/) and 2.0 [https://www.cog-genomics.org/plink/2.0/](https://www.cog-genomics.org/plink/2.0/); LDpred2 [https://privefl.github.io/bigsnpr/articles/LDpred2.html](https://privefl.github.io/bigsnpr/articles/LDpred2.html); LASSOSUM [https://github.com/tshmak/lassosum](https://github.com/tshmak/lassosum).
--   **Data:**  UK Biobank access for real trait analyses; simulated data available.
+-   **Data:**  UK Biobank access for real trait analyses; simulated data and summary statistics for disease traits public available.
 
 ## Data Download
 -   **Simulated data:**  
